@@ -1,0 +1,18 @@
+{
+  "name": "ably-server",
+  "version": "1.0.0",
+  "description": "#",
+  "main": "ablyserver.js",
+  "dependencies": {
+    "ably": "^1.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "web-vitals": "^2.1.2"
+  },
+  "scripts": {
+    "start": "node ablyserver.js"
+  },
+  "author": "INPLCO",
+  "license": "Apache 2.0"
+}
