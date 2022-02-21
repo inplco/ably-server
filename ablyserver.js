@@ -6,6 +6,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
+
 const realTimeAuth = (tokenParams, response) => {
   realtime.auth.createTokenRequest(tokenParams, function (err, tokenRequest) {
     if (err) {
@@ -35,4 +36,8 @@ app.get("/subscribe", (request, response) => {
     capability: '{"*":["subscribe"]}',
   };
   realTimeAuth(tokenParams, response);
+});
+
+const listener = app.listen(process.env.PORT, () => {
+  console.log("Ably is listening on port " + listener.address().port);
 });
